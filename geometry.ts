@@ -42,7 +42,8 @@ export class Rectangle implements Shape {
   ) {}
 
   circumference(): number {
-    return 2 * (this.width() + 2 * this.height());
+    // return 2 * (this.width() + 2 * this.height()); // this is a bug and does NOT work correctly
+    return 2 * (this.width() + this.height()); // this would be the corrected version
   }
 
   area(): number {
